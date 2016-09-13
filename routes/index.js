@@ -4,7 +4,7 @@ var api = require('../api/meetup');
 var train = require('../api/rtd');
 
 /* GET home page. */
-router.get('/', function(req, res, next) {
+router.get('/meetups', function(req, res, next) {
   api.getMeetup().then(data => {
     res.send(data);
   })
